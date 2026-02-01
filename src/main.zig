@@ -97,15 +97,16 @@ pub fn main() !void {
 
     if (std.mem.eql(u8, command, "shotchart")) {
         const game_id = try args.requireOption(cmd_args.items, "--game-id");
-        const home_id_str = try args.requireOption(cmd_args.items, "--home");
-        const away_id_str = try args.requireOption(cmd_args.items, "--away");
-        const home_id = try std.fmt.parseInt(i64, home_id_str, 10);
-        const away_id = try std.fmt.parseInt(i64, away_id_str, 10);
-
         var arena = std.heap.ArenaAllocator.init(allocator);
         defer arena.deinit();
+        const bs = try nba.fetchBoxScore(arena.allocator(), cfg, game_id);
         const pbp = try nba.fetchPlayByPlay(arena.allocator(), cfg, game_id);
-        const chart = try playbyplay.getShotChart(arena.allocator(), pbp, home_id, away_id);
+        const chart = try playbyplay.getShotChart(
+            arena.allocator(),
+            pbp,
+            bs.game.homeTeam.teamId,
+            bs.game.awayTeam.teamId,
+        );
         if (format == .table) return error.UnsupportedFormat;
         try output.printJson(chart);
         return;
@@ -142,7 +143,7 @@ fn printUsage() !void {
         "  scoreboard --date YYYYMMDD\n" ++
         "  boxscore --game-id GAME_ID\n" ++
         "  playbyplay --game-id GAME_ID\n" ++
-        "  shotchart --game-id GAME_ID --home TEAM_ID --away TEAM_ID\n" ++
+        "  shotchart --game-id GAME_ID\n" ++
         "  refs --game-id GAME_ID\n",
     );
     try out.interface.flush();
