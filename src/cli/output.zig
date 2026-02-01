@@ -26,8 +26,9 @@ pub fn printScoreboardTable(sb: scoreboard.ScoreBoard) !void {
     for (sb.scoreboard.games) |g| {
         const away = g.awayTeam.teamTricode;
         const home = g.homeTeam.teamTricode;
-        const away_score = g.awayTeam.score;
-        const home_score = g.homeTeam.score;
+        const away_score: u32 = @intCast(g.awayTeam.score);
+        const home_score: u32 = @intCast(g.homeTeam.score);
+        const period: u32 = @intCast(g.period);
         try out.interface.print("{s:<8} {s:<4} {s:<4} {d:>3}-{d:<3} {s:<12} {d:>2} {s:<5}\n", .{
             g.gameId,
             away,
@@ -35,7 +36,7 @@ pub fn printScoreboardTable(sb: scoreboard.ScoreBoard) !void {
             away_score,
             home_score,
             g.gameStatusText,
-            g.period,
+            period,
             g.gameClock,
         });
     }
