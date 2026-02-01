@@ -39,21 +39,6 @@ pub fn valueToBool(v: Value) bool {
     };
 }
 
-pub fn getObject(value: Value, key: []const u8) ?std.json.ObjectMap {
-    if (value != .object) return null;
-    if (value.object.get(key)) |v| {
-        if (v == .object) return v.object;
-    }
-    return null;
-}
-
-pub fn getArray(value: Value, key: []const u8) ?[]const Value {
-    if (value != .object) return null;
-    const v = value.object.get(key) orelse return null;
-    if (v != .array) return null;
-    return v.array.items;
-}
-
 pub fn getString(obj: std.json.ObjectMap, key: []const u8, default: []const u8) []const u8 {
     if (obj.get(key)) |v| return valueToString(v);
     return default;
