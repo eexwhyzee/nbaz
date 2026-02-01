@@ -1,0 +1,68 @@
+{
+  "meta": {"version": 1, "code": 200, "request": "test", "time": "2024-01-01T00:00:00Z"},
+  "game": {
+    "gameId": "001",
+    "actions": [
+      {
+        "actionNumber": 1,
+        "clock": "PT11M00.00S",
+        "period": 1,
+        "actionType": "shot",
+        "subType": "jump shot",
+        "qualifiers": [],
+        "personId": 10,
+        "teamId": 100,
+        "teamTricode": "HOM",
+        "description": "Player One makes 2-pt jump shot",
+        "officialId": 0,
+        "isFieldGoal": 1,
+        "x": 5,
+        "y": 50,
+        "shotDistance": 3,
+        "shotResult": "Made",
+        "playerName": "Player One",
+        "descriptor": ""
+      },
+      {
+        "actionNumber": 2,
+        "clock": "PT10M30.00S",
+        "period": 1,
+        "actionType": "shot",
+        "subType": "3pt shot",
+        "qualifiers": [],
+        "personId": 20,
+        "teamId": 200,
+        "teamTricode": "AWY",
+        "description": "Player Two misses 3-pt shot",
+        "officialId": 0,
+        "isFieldGoal": 1,
+        "x": 95,
+        "y": 5,
+        "shotDistance": 23,
+        "shotResult": "Missed",
+        "playerName": "Player Two",
+        "descriptor": ""
+      },
+      {
+        "actionNumber": 3,
+        "clock": "PT10M00.00S",
+        "period": 1,
+        "actionType": "foul",
+        "subType": "personal",
+        "qualifiers": ["2freethrow"],
+        "personId": 30,
+        "teamId": 100,
+        "teamTricode": "HOM",
+        "description": "Foul by Player Three (2 FT)",
+        "officialId": 99,
+        "isFieldGoal": 0,
+        "x": null,
+        "y": null,
+        "shotDistance": 0,
+        "shotResult": "",
+        "playerName": "Player Three",
+        "descriptor": ""
+      }
+    ]
+  }
+}

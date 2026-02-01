@@ -1,0 +1,130 @@
+{
+  "meta": {"version": 1, "code": 200, "request": "test", "time": "2024-01-01T00:00:00Z"},
+  "game": {
+    "gameId": "001",
+    "gameStatusText": "Final",
+    "gameStatus": 3,
+    "period": 4,
+    "officials": [
+      {"personId": 99, "name": "Ref A"}
+    ],
+    "homeTeam": {
+      "teamId": 100,
+      "teamName": "Home",
+      "teamCity": "Home City",
+      "teamTricode": "HOM",
+      "score": 110,
+      "inBonus": "",
+      "timeoutsRemaining": 2,
+      "periods": [
+        {"period": 1, "periodType": "REG", "score": 25}
+      ],
+      "players": [
+        {
+          "personId": 1,
+          "name": "Player One",
+          "statistics": {
+            "minutes": "PT41M",
+            "minutesCalculated": "PT41M",
+            "fieldGoalsAttempted": 15,
+            "fieldGoalsMade": 8,
+            "threePointersMade": 2,
+            "points": 20
+          }
+        },
+        {
+          "personId": 2,
+          "name": "Player Two",
+          "statistics": {
+            "minutes": "PT14M",
+            "minutesCalculated": "PT14M",
+            "fieldGoalsAttempted": 5,
+            "fieldGoalsMade": 2,
+            "threePointersMade": 0,
+            "points": 6
+          }
+        }
+      ],
+      "statistics": {
+        "points": 110,
+        "fieldGoalsAttempted": 80,
+        "fieldGoalsMade": 40,
+        "threePointersAttempted": 30,
+        "threePointersMade": 10,
+        "freeThrowsAttempted": 20,
+        "freeThrowsMade": 15,
+        "turnovers": 10,
+        "turnoversTeam": 2,
+        "reboundsOffensive": 8,
+        "reboundsDefensive": 30,
+        "reboundsTotal": 38,
+        "steals": 7,
+        "blocks": 5,
+        "assists": 25,
+        "minutes": "PT240M",
+        "trueShootingPercentage": 0.55,
+        "fieldGoalsEffectiveAdjusted": 0.52,
+        "foulsPersonal": 15
+      }
+    },
+    "awayTeam": {
+      "teamId": 200,
+      "teamName": "Away",
+      "teamCity": "Away City",
+      "teamTricode": "AWY",
+      "score": 98,
+      "inBonus": "",
+      "timeoutsRemaining": 1,
+      "periods": [
+        {"period": 1, "periodType": "REG", "score": 20}
+      ],
+      "players": [
+        {
+          "personId": 3,
+          "name": "Player Three",
+          "statistics": {
+            "minutes": "PT35M30.00S",
+            "minutesCalculated": "PT35M30.00S",
+            "fieldGoalsAttempted": 12,
+            "fieldGoalsMade": 6,
+            "threePointersMade": 1,
+            "points": 15
+          }
+        },
+        {
+          "personId": 4,
+          "name": "Player Four",
+          "statistics": {
+            "minutes": "PT18M",
+            "minutesCalculated": "PT18M",
+            "fieldGoalsAttempted": 4,
+            "fieldGoalsMade": 1,
+            "threePointersMade": 0,
+            "points": 2
+          }
+        }
+      ],
+      "statistics": {
+        "points": 98,
+        "fieldGoalsAttempted": 75,
+        "fieldGoalsMade": 38,
+        "threePointersAttempted": 28,
+        "threePointersMade": 9,
+        "freeThrowsAttempted": 18,
+        "freeThrowsMade": 13,
+        "turnovers": 12,
+        "turnoversTeam": 1,
+        "reboundsOffensive": 6,
+        "reboundsDefensive": 28,
+        "reboundsTotal": 34,
+        "steals": 6,
+        "blocks": 4,
+        "assists": 22,
+        "minutes": "PT240M",
+        "trueShootingPercentage": 0.52,
+        "fieldGoalsEffectiveAdjusted": 0.50,
+        "foulsPersonal": 18
+      }
+    }
+  }
+}
