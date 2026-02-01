@@ -166,12 +166,10 @@ pub const TeamStats = struct {
     twoPointersPercentage: f64,
 };
 
-
 pub const TeamStatsPair = struct {
     home: TeamStats,
     away: TeamStats,
 };
-
 
 pub const TeamCount = struct {
     teamTricode: []const u8,
