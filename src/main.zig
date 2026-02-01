@@ -145,4 +145,5 @@ fn printUsage() !void {
         "  shotchart --game-id GAME_ID --home TEAM_ID --away TEAM_ID\n" ++
         "  refs --game-id GAME_ID\n",
     );
+    try out.interface.flush();
 }

@@ -16,6 +16,7 @@ pub fn printJson(value: anytype) !void {
     var out = std.fs.File.stdout().writer(&buffer);
     try std.json.Stringify.value(value, .{ .whitespace = .indent_2 }, &out.interface);
     try out.interface.writeByte('\n');
+    try out.interface.flush();
 }
 
 pub fn printScoreboardTable(sb: scoreboard.ScoreBoard) !void {
@@ -38,4 +39,5 @@ pub fn printScoreboardTable(sb: scoreboard.ScoreBoard) !void {
             g.gameClock,
         });
     }
+    try out.interface.flush();
 }
