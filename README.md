@@ -42,22 +42,22 @@ Use: `--format json|table`
 
 ```sh
 # Daily scoreboard
-zig build run -- scoreboard --date 20260201
+nbaz scoreboard --date 20260201
 
 # Scoreboard as a table
-zig build run -- --format table scoreboard --date 20260201
+nbaz --format table scoreboard --date 20260201
 
 # Boxscore for a game
-zig build run -- boxscore --game-id 0022500703
+nbaz boxscore --game-id 0022500703
 
 # Play-by-play for a game
-zig build run -- playbyplay --game-id 0022500703
+nbaz playbyplay --game-id 0022500703
 
 # Shot chart
-zig build run -- shotchart --game-id 0022500703
+nbaz shotchart --game-id 0022500703
 
 # Ref stats
-zig build run -- refs --game-id 0022500703
+nbaz refs --game-id 0022500703
 
 ```
 
