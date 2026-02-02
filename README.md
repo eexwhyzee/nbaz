@@ -4,7 +4,7 @@ NBA API wrapper written in Zig.
 
 I've already been using my own NBA API wrapper (written in Go) that
 powers the backend of [rthoops.net](https://rthoops.net) for awhile now, but i wanted to release the
-core functionality wrapper as a CLI tool and decided to do it in Zig for
+core functionality as a CLI tool and decided to do it in Zig for
 fun and learning purposes.
 
 ## Requirements
